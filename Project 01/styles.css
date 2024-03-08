@@ -1,0 +1,99 @@
+/* You can not modify anything in the HTML */
+/* You can only modify the CSS file */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 5%;
+  height: 15vh;
+}
+
+.nav-list ul {
+  display: flex;
+  list-style-type: none;
+  /* margin: 25px 0px 0px 0px; */
+  /* margin-right:400px; */
+  /* justify-content:space-evenly; */
+  /* align-items: center; */
+}
+
+.nav-img img {
+  max-width: 100px;
+}
+
+.nav-container .nav-list {
+  margin-right: auto;
+}
+
+.nav-list ul li {
+  margin-left: 70px;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 10px;
+}
+
+/* .nav-container .nav-btn button {
+  margin-right: auto;
+  margin-right: 100px;
+} */
+
+.btn {
+  border-radius: 12px;
+  padding: 5px 25px 5px 25px;
+  height: 50px;
+  background-color: #4247aee1;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  border: none;
+  font-size: 16px;
+}
+
+.li-item {
+  color: #a4b0bd;
+}
+
+.banner-container {
+  display: flex;
+  /* height: 85vh; */
+}
+
+.banner-container .leftpart {
+  width: 40%;
+  padding: 20px 0 0 5%;
+}
+
+.leftpart h1 {
+  font-size: 4em;
+  font-weight: 600;
+  color: #192a56;
+}
+
+.leftpart span {
+  color: rgb(63, 63, 186);
+}
+
+.description {
+  color: rgba(140, 112, 112, 0.926);
+  font-weight: 500;
+  margin-block: 25px;
+  width: 70%;
+}
+
+.rightpart {
+  width: 60%;
+}
+
+.rightpart img {
+  width: 80%;
+  float: right;
+  padding-right: 2px;
+  /* margin-top: 40px; */
+}
