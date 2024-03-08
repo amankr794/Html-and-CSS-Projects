@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins;
+}
+
+body {
+  background-color: rgba(237, 232, 223, 0.942);
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 30px 30px;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.nav-list {
+  display: flex;
+  list-style-type: none;
+  gap: 50px;
+  margin-right: auto;
+  cursor: pointer;
+  flex-wrap: wrap;
+}
+
+.list-item {
+  transition: all 0.3s ease-in-out;
+}
+
+.list-item:hover {
+  transform: scale(1.1);
+}
+
+.list-item {
+  font-weight: 500;
+  font-size: 1.2em;
+}
+
+.nav-image {
+  width: 100px;
+  margin-left: 5%;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-image:hover {
+  transform: scale(1.1);
+}
+
+.banner {
+  /* width: 1440px;
+  margin:auto; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 7%;
+  /* gap:50px; */
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.left-part {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* text-align: left; */
+  /* padding:20px; */
+  flex-wrap: wrap;
+}
+
+.heading {
+  font-weight: 700;
+  width: 330px;
+  font-size: 3em;
+}
+
+.description {
+  font-size: 1.2em;
+}
+
+.btn {
+  width: 150px;
+  height: 50px;
+  border-radius: 20px;
+  color: #ffffff;
+  background-color: #328732;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  /* transition: all 0.3s ease-in-out; */
+}
+
+.img-1{
+    height:240px;
+    float: right;
+}
+.img-2{
+    height:260px;
+}
+.img-3{
+    width:450px;
+}
+
+.right-part {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  grid-column-gap: 10px;
+  grid-row-gap: 15px;
+}
+
+.span2 {
+  grid-column: span 2;
+}
+
+.right-part div {
+  padding: 5px;
+}
+
+.right-part img {
+  transition: all 0.3s ease-in-out;
+}
+
+.right-part img:hover {
+  transform: scale(1.1);
+}
