@@ -2,4 +2,4 @@
 
 | No. 	| **Project Name** 	| **Project Folder**                                                                  	| **Live** 	|
 |-----	|------------------	|-------------------------------------------------------------------------------------	|-----------------	|
-| 1   	| SEO Master       	| [Click Here](/tree/main/Project%2001) 	                                              | [Click Here](/tree/main/Project%2001)  	|
+| 1   	| SEO Master       	| [Click Here](./tree/main/Project%2001) 	                                              | [Click Here](./tree/main/Project%2001)  	|
