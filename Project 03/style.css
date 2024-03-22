@@ -1,0 +1,253 @@
+/* You can not modify anything in the HTML */
+/* You can only modify the CSS file */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family:  */
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-color: var(--background-color);
+}
+
+:root {
+  --background-color: #ffffff;
+  --black-color: #000000;
+  --grey-color: #5b5b5b;
+  --border-color: #4c4c4c;
+  --heading-color: #515151;
+  --description-color: #575757;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+/** Navbar Section **/
+.navbar-container {
+  height: 15vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-container .list {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.navbar-container .button-group {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbar-container img {
+  max-width: 100px;
+}
+
+.navbar-container .list .list-item {
+  list-style-type: none;
+  cursor: pointer;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: transform 0.2s ease-in-out; /* Apply transition for width change */
+}
+
+.list-item::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  /* width: 100%;  pseudo-element spans the full width of its parent element (.list-item). */
+  height: 2px;
+  /* left: 20%; */
+  /* right: 40%; */
+  background-color: var(--black-color);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.list-item:hover::after {
+  width: 70%; /*Adjust width on hover*/
+  left: 15%;
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.list-item:hover {
+  transform: scale(1.2);
+  /* transition: transform 0.4s ease-in-out; */
+}
+
+.search-icon svg {
+  margin-top: 5px;
+  width: 25px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.search-icon svg:hover {
+  transform: scale(1.2);
+  /* transition: transform 0.2s ease-in-out; */
+}
+
+.nav-button {
+  height: 43px;
+  width: 173px;
+  border-radius: 15px;
+  background-color: var(--background-color);
+  border: 3px solid;
+  font-size: 23px;
+  font-family: Poppins;
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav-button:hover {
+  transform: scale(1.05);
+  /* transition: transform 0.2s ease-in-out; */
+}
+
+/** Hero Banner Section **/
+.hero-container {
+  position: relative;
+  display: flex;
+  padding-top: 5%;
+  height: 85vh;
+}
+
+.hero-container > span {
+  position: absolute;
+}
+
+.hero-container .square {
+  bottom: 0;
+  left: 166px;
+}
+
+.hero-container .square img {
+  height: 300px;
+}
+
+.hero-container .square + span {
+  top: 50px;
+  right: 2%;
+}
+
+.hero-container > span:nth-child(3) {
+  bottom: 10%;
+  left: 40%;
+}
+
+.hero-container > span:nth-child(3) img {
+  height: 3rem;
+}
+
+.hero-container .globe {
+  left: 50%;
+  right: 50%;
+  top: -1%;
+}
+
+.hero-container .globe + div {
+  position: absolute;
+  left: 0;
+}
+
+.hero-container > .globe + div img {
+  height: 500px;
+}
+
+.hero-container-right {
+  width: 70%;
+  margin-left: auto;
+  padding-top: 5%;
+  text-align: center;
+}
+
+.hero-container-right h1 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 4rem;
+  word-spacing: 0.2em;
+}
+
+.hero-description {
+  width: 70%;
+  margin: 3rem auto 0 auto;
+  font-family: Poppins;
+  font-size: 0.9rem;
+  color: var(--description-color);
+}
+
+.hero-description + div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-block: 4.8rem;
+}
+
+.hero-container-right button {
+  height: 2rem;
+  border-radius: 10px;
+  border: 3px solid var(--border-color);
+  font-size: 1rem;
+  font-family: "Orbitron", sans-serif;
+  word-spacing: 0.1em;
+  font-weight: 600;
+  transition: all 0.5s;
+  cursor: pointer;
+  background-color: var(--background-color);
+  color: var(--grey-color);
+}
+
+.hero-container-right button:hover {
+  transform: scale(1.05);
+  color: var(--background-color);
+  background-color: var(--black-color);
+  border: none;
+}
+
+.button-email {
+  width: 150px;
+}
+
+.button-join {
+  width: 120px;
+}
+
+.contact-heading {
+  font-family: Poppins;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--heading-color);
+  font-size: 21px;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  margin-top: 5px;
+}
+
+.icons span img {
+  height: 2rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.icons span img:hover {
+  transform: scale(1.09);
+}
