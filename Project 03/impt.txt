@@ -1,0 +1,84 @@
+difference between the two css code snippets
+
+.search-icon svg {
+  width: 28px;
+  transition: transform 0.2s ease-in-out;
+}
+.search-icon svg:hover {
+  transform: scale(1.2);
+}
+
+and
+
+.search-icon svg {
+  width: 28px;
+}
+.search-icon svg:hover {
+  transform: scale(1.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+
+=> In the first block:
+
+    The transition property is applied to the .search-icon svg selector. This means that any change in the transform property will be animated with a duration of 0.2 seconds and an ease-in-out timing function.
+   
+    The transform property is only defined within the :hover pseudo-class. When the SVG is hovered over, it scales up by 1.2 times its original size.
+
+   In the second block:
+
+    The transition property is not initially applied to the .search-icon svg selector. Instead, it's only applied within the :hover pseudo-class. This means that when the SVG is hovered over, the transformation will be animated with a duration of 0.2 seconds and an ease-in-out timing function.
+    
+    The transform property is also defined within the :hover pseudo-class, causing the SVG to scale up when hovered over.
+    
+    Essentially, in the second block, the transition effect is explicitly applied only when the SVG is hovered over, whereas in the first block, it's applied to all transformations, including the hover transformation.
+
+Q> i want my image to be smoothly scale up on hovering and also smoothly scale down on unhovering ?
+
+=> To achieve smooth scaling both on hovering and unhovering, you can apply the transition property to the default state and then specify the transformation on hover. Here's how you can modify your CSS:
+
+example: 
+
+.search-icon svg {
+  width: 28px;
+  transition: transform 0.2s ease-in-out; /* Apply transition to smoothly scale */
+}
+
+.search-icon svg:hover {
+  transform: scale(1.2); /* Scale up on hover */
+}
+ 
+With this CSS:
+The transition is applied to the .search-icon svg selector, meaning any changes to the transform property will be animated over a duration of 0.2 seconds with an ease-in-out timing function.
+
+When the SVG is hovered over, it will scale up smoothly by 1.2 times its original size due to the transform property applied in the :hover pseudo-class.
+
+Since you've applied the transition to the default state, any changes made to the transform property (including scaling down) will be smoothly animated when the hover state is removed. This ensures that both hovering and unhovering actions result in smooth scaling transitions.
+
+
+Applying hovering effect on pseudo class element ::after
+
+Q> can i use :
+
+.list-item::after:hover {
+  width: 70%; /* Adjust width on hover */
+}  
+
+No, you cannot achieve the desired effect by using .list-item::after:hover.
+
+The reason is that ::after is a pseudo-element and cannot be directly targeted with the :hover pseudo-class. The :hover pseudo-class can only be applied to elements themselves, not to their pseudo-elements.
+
+To achieve the desired effect of changing the width of the pseudo-element when hovering over the .list-item, you need to use the :hover pseudo-class directly on the .list-item and then apply the width change to the ::after pseudo-element within that selector, as demonstrated in example:
+
+.list-item::after {
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--black-color);
+  transition: width 0.3s ease; /* Apply transition for width change */
+}
+
+.list-item:hover::after {
+  width: 70%; /* Adjust width on hover */
+}
